@@ -202,9 +202,9 @@ static Key keys[] = {
   { MODKEY,              XK_g,             shiftview,        { .i = -1 } },
   { MODKEY|ShiftMask,    XK_g,             shifttag,         { .i = -1 } },
   { MODKEY,              XK_h,             setmfact,         {.f = -0.05} },
-  { MODKEY|ShiftMask,    XK_h,             spawn,            SHCMD("$APP1") },
-  { MODKEY|ShiftMask,    XK_j,             spawn,            SHCMD("$APP2") },
-  { MODKEY|ShiftMask,    XK_k,             spawn,            SHCMD("$APP3") },
+  { MODKEY|ShiftMask,    XK_h,             spawn,            SHCMD("$APPH") },
+  { MODKEY|ShiftMask,    XK_j,             spawn,            SHCMD("$APPJ") },
+  { MODKEY|ShiftMask,    XK_k,             spawn,            SHCMD("$APPK") },
   /* J and K are automatically bound above in STACKEYS */
   { MODKEY|ShiftMask,    XK_l,             spawn,            SHCMD("blurlock")},
   { MODKEY,              XK_l,             setmfact,         {.f = +0.05} },
