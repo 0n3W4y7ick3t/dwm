@@ -5,4 +5,4 @@ scripts: [lukes](https://github.com/0n3W4y7ick3t/rice/tree/main/.local/bin/lukes
 
 [dmenu](https://github.com/0n3W4y7ick3t/dmenu)
 
-The main branch use QWERTY layout, dvp branch use a modified dvorak programming layout.
+The main branch uses QWERTY layout, dvp branch uses a modified dvorak programming layout.
