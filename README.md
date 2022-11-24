@@ -5,4 +5,4 @@ scripts: [lukes](https://github.com/0n3W4y7ick3t/rice/tree/main/.local/bin/lukes
 
 [dmenu](https://github.com/0n3W4y7ick3t/dmenu)
 
-~~By default, config.h uses Dvorak mappings, you can use config.qwerty if you want QWERTY instead.~~
+The main branch use QWERTY layout, dvp branch use a modified dvorak programming layout.
