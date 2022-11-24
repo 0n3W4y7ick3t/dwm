@@ -1,5 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
+/* *** This config use QWERTY keyboard layout. *** */
+
 /* Constants */
 #define TERMINAL "st"
 #define TERMCLASS "St"
