@@ -172,7 +172,7 @@ static Key keys[] = {
   { MODKEY,              XK_w,             spawn,            SHCMD("$BROWSER1") },
   { MODKEY|ShiftMask,    XK_w,             spawn,            SHCMD("$BROWSER2") },
   { MODKEY,              XK_e,             spawn,            SHCMD(TERMINAL " -e lfub") },
-  { MODKEY|ShiftMask,    XK_e,             spawn,            SHCMD("code") },
+  { MODKEY|ShiftMask,    XK_e,             spawn,            SHCMD("nemo") },
   { MODKEY,              XK_r,             spawn,            SHCMD(TERMINAL " -e htop") },
   /* { MODKEY|ShiftMask,    XK_r,             spawn,            SHCMD(TERMINAL " -e neomutt ; pkill -RTMIN+12 dwmblocks; rmdir ~/.abook") }, */
   { MODKEY|ShiftMask,    XK_r,             spawn,            SHCMD("ranbg") },
@@ -266,8 +266,8 @@ static Key keys[] = {
   { ALTKEY|ShiftMask,    XK_s,             spawn,            SHCMD("maimsel") },
   { MODKEY|ShiftMask,    XK_s,             spawn,            SHCMD("maimcopy") },
   { ALTKEY|ShiftMask,    XK_v,             spawn,            SHCMD("copyq menu") },
-  { MODKEY,              XK_Print,         spawn,            SHCMD("dmenurecord") },
-  { MODKEY,              XK_Delete,        spawn,            SHCMD("dmenurecord kill") },
+  /* { MODKEY,              XK_Print,         spawn,            SHCMD("dmenurecord") }, */
+  /* { MODKEY,              XK_Delete,        spawn,            SHCMD("dmenurecord kill") }, */
 
   { 0, XF86XK_AudioMute,          spawn,   SHCMD("pulsemixer --toggle-mute; kill -44 $(pidof dwmblocks)") },
   { 0, XF86XK_AudioRaiseVolume,   spawn,   SHCMD("pulsemixer --change-volume +3; kill -44 $(pidof dwmblocks)") },
