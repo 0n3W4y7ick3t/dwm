@@ -174,7 +174,6 @@ static Key keys[] = {
   { MODKEY,              XK_e,             spawn,            SHCMD(TERMINAL " -e lfub") },
   { MODKEY|ShiftMask,    XK_e,             spawn,            SHCMD("nemo") },
   { MODKEY,              XK_r,             spawn,            SHCMD(TERMINAL " -e htop") },
-  /* { MODKEY|ShiftMask,    XK_r,             spawn,            SHCMD(TERMINAL " -e neomutt ; pkill -RTMIN+12 dwmblocks; rmdir ~/.abook") }, */
   { MODKEY|ShiftMask,    XK_r,             spawn,            SHCMD("ranbg") },
   { MODKEY,              XK_t,             setlayout,        {.v = &layouts[0]} }, /* tile */
   { MODKEY|ShiftMask,    XK_t,             setlayout,        {.v = &layouts[1]} }, /* bstack */
@@ -229,7 +228,8 @@ static Key keys[] = {
   /* V is automatically bound above in STACKKEYS */
   { MODKEY,              XK_b,             togglebar,        {0} },
   { MODKEY,              XK_n,             spawn,            SHCMD(TERMINAL " -e nvim -c VimwikiIndex") },
-  { MODKEY|ShiftMask,    XK_n,             spawn,            SHCMD(TERMINAL " -e newsboat; pkill -RTMIN+6 dwmblocks") },
+  { MODKEY|ShiftMask,    XK_n,             spawn,            SHCMD(TERMINAL " -e neomutt ; pkill -RTMIN+12 dwmblocks; rmdir ~/.abook") },
+  /* { MODKEY|ShiftMask,    XK_n,             spawn,            SHCMD(TERMINAL " -e newsboat; pkill -RTMIN+6 dwmblocks") }, */
   { MODKEY,              XK_m,             spawn,            SHCMD(TERMINAL " -e ncmpcpp") },
   { MODKEY|ShiftMask,    XK_m,             spawn,            SHCMD("pulsemixer --toggle-mute; kill -44 $(pidof dwmblocks)") },
   { MODKEY,              XK_comma,         spawn,            SHCMD("mpc prev") },
