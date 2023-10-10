@@ -21,8 +21,10 @@ static int smartgaps =
     0;                  /* 1 means no outer gap when there is only one window */
 static int showbar = 1; /* 0 means no bar */
 static int topbar = 1;  /* 0 means bottom bar */
-static char *fonts[] = {"Hack Nerd Font:size=12",
-                        "NotoColorEmoji:size=12:antialias=true:autohint=true"};
+static char *fonts[] = {
+    "Hack Nerd Font:pixelsize=34",
+    "NotoColorEmoji:pixelsize=34:antialias=true:autohint=true"};
+
 static char normbgcolor[] = "#222222";
 static char normbordercolor[] = "#444444";
 static char normfgcolor[] = "#bbbbbb";
@@ -39,7 +41,7 @@ typedef struct {
   const char *name;
   const void *cmd;
 } Sp;
-const char *spcmd1[] = {TERMINAL, "-n", "spterm", "-g", "90x25", NULL};
+const char *spcmd1[] = {TERMINAL, "-n", "spterm", "-g", "120x35", NULL};
 const char *spcmd2[] = {TERMINAL, "-n", "spcalc", "-g", "50x20",
                         "-e",     "bc", "-lq",    NULL};
 static Sp scratchpads[] = {
@@ -225,9 +227,6 @@ static Key keys[] = {
     {MODKEY, XK_semicolon, shiftview, {.i = 1}},
     {MODKEY | ShiftMask, XK_semicolon, shifttag, {.i = 1}},
     {MODKEY, XK_apostrophe, togglescratch, {.ui = 1}},
-    /* { MODKEY|ShiftMask,    XK_apostrophe,    spawn,            SHCMD("") },
-     */
-    {MODKEY | ShiftMask, XK_apostrophe, togglesmartgaps, {0}},
     /*ugly but work */
     {MODKEY, XK_Return, spawn, SHCMD(TERMINAL)},
     {ShiftMask, XK_Return, spawn, SHCMD("st-wrap")},
@@ -235,6 +234,7 @@ static Key keys[] = {
     {MODKEY | ShiftMask, XK_Return, togglescratch, {.ui = 0}},
 
     {MODKEY, XK_z, incrgaps, {.i = -3}},
+    {MODKEY | ShiftMask, XK_z, togglesmartgaps, {0}},
     {MODKEY, XK_x, incrgaps, {.i = +3}},
     {MODKEY, XK_c, spawn, SHCMD("code")},
     /* { MODKEY|ShiftMask,    XK_c,             spawn,    SHCMD("") }, */
