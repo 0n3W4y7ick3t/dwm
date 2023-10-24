@@ -243,6 +243,8 @@ static Key keys[] = {
     {MODKEY, XK_b, togglebar, {0}},
     {MODKEY, XK_n, spawn, SHCMD(TERMINAL " -e nvim -c VimwikiIndex")},
     {MODKEY | ShiftMask, XK_n, spawn,
+     SHCMD(TERMINAL " -e nvim -c VimwikiDiaryIndex")},
+    {MODKEY | ShiftMask, XK_n, spawn,
      SHCMD(TERMINAL " -e neomutt ; pkill -RTMIN+12 dwmblocks; rmdir ~/.abook")},
     /* { MODKEY|ShiftMask,    XK_n,             spawn,            SHCMD(TERMINAL
        " -e newsboat; pkill -RTMIN+6 dwmblocks") }, */
