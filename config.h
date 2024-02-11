@@ -22,8 +22,8 @@ static int smartgaps =
 static int showbar = 1; /* 0 means no bar */
 static int topbar = 1;  /* 0 means bottom bar */
 static char *fonts[] = {
-    "FiraCode Nerd Font:pixelsize=34",
-    "NotoColorEmoji:pixelsize=34:antialias=true:autohint=true"};
+    "FiraCode Nerd Font:pixelsize=27",
+    "NotoColorEmoji:pixelsize=25:antialias=true:autohint=true"};
 
 static char normbgcolor[] = "#222222";
 static char normbordercolor[] = "#444444";
@@ -230,7 +230,7 @@ static Key keys[] = {
     /*ugly but work */
     {MODKEY, XK_Return, spawn, SHCMD(TERMINAL)},
     {ShiftMask, XK_Return, spawn, SHCMD("st-wrap")},
-    {Mod1Mask | ShiftMask, XK_Return, spawn, SHCMD("sd")},
+    {Mod1Mask | ShiftMask, XK_Return, spawn, SHCMD("samedir")},
     {MODKEY | ShiftMask, XK_Return, togglescratch, {.ui = 0}},
 
     {MODKEY, XK_z, incrgaps, {.i = -3}},
@@ -294,8 +294,8 @@ static Key keys[] = {
     {ALTKEY | ShiftMask, XK_w, spawn, SHCMD("lastscreenshot")},
     {MODKEY | ShiftMask, XK_s, spawn, SHCMD("maimcopy")},
     {ALTKEY | ShiftMask, XK_v, spawn, SHCMD("copyq menu")},
-    {MODKEY, XK_Print, spawn, SHCMD("dmenurecord-nv")},
-    {MODKEY, XK_Delete, spawn, SHCMD("dmenurecord-nv kill")},
+    {MODKEY, XK_Print, spawn, SHCMD("dmenurecord")},
+    {MODKEY, XK_Delete, spawn, SHCMD("dmenurecord kill")},
 
     {0, XF86XK_AudioMute, spawn,
      SHCMD("pulsemixer --toggle-mute; kill -44 $(pidof dwmblocks)")},
