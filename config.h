@@ -241,6 +241,7 @@ static Key keys[] = {
 
     /* V is automatically bound above in STACKKEYS */
     {MODKEY, XK_b, togglebar, {0}},
+    {MODKEY | ShiftMask, XK_b, spawn, SHCMD("dmenubooks")},
     {MODKEY, XK_n, spawn, SHCMD(TERMINAL " -e nvim -c VimwikiIndex")},
     {MODKEY | ShiftMask, XK_n, spawn,
      SHCMD(TERMINAL " -e nvim -c VimwikiDiaryIndex")},
@@ -355,3 +356,4 @@ static Button buttons[] = {
     {ClkTagBar, 0, Button5, shiftview, {.i = 1}},
     {ClkRootWin, 0, Button2, togglebar, {0}},
 };
+
