@@ -22,8 +22,8 @@ static int smartgaps =
 static int showbar = 1; /* 0 means no bar */
 static int topbar = 1;  /* 0 means bottom bar */
 static char *fonts[] = {
-    "FiraCode Nerd Font:pixelsize=27",
-    "NotoColorEmoji:pixelsize=25:antialias=true:autohint=true"};
+    "FiraCode Nerd Font:pixelsize=30",
+    "NotoColorEmoji:pixelsize=28:antialias=true:autohint=true"};
 
 static char normbgcolor[] = "#222222";
 static char normbordercolor[] = "#444444";
@@ -181,8 +181,7 @@ static Key keys[] = {
     /* { MODKEY|ShiftMask,    XK_Tab,           spawn,            SHCMD("") },
      */
     {MODKEY, XK_q, killclient, {0}},
-    {MODKEY, XK_w, spawn, SHCMD("$BROWSER1")},
-    {MODKEY | ShiftMask, XK_w, spawn, SHCMD("$BROWSER2")},
+    {MODKEY, XK_w, spawn, SHCMD("$BROWSER")},
     {MODKEY, XK_e, spawn, SHCMD(TERMINAL " -e lfub")},
     {MODKEY | ShiftMask, XK_e, spawn, SHCMD("nemo")},
     {MODKEY, XK_r, spawn, SHCMD(TERMINAL " -e htop")},
@@ -356,4 +355,3 @@ static Button buttons[] = {
     {ClkTagBar, 0, Button5, shiftview, {.i = 1}},
     {ClkRootWin, 0, Button2, togglebar, {0}},
 };
-
