@@ -228,7 +228,6 @@ static Key keys[] = {
     {MODKEY, XK_apostrophe, togglescratch, {.ui = 1}},
     /*ugly but work */
     {MODKEY, XK_Return, spawn, SHCMD(TERMINAL)},
-    {ShiftMask, XK_Return, spawn, SHCMD("st-wrap")},
     {Mod1Mask | ShiftMask, XK_Return, spawn, SHCMD("samedir")},
     {MODKEY | ShiftMask, XK_Return, togglescratch, {.ui = 0}},
 
