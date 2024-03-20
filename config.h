@@ -22,7 +22,7 @@ static int smartgaps =
 static int showbar = 1; /* 0 means no bar */
 static int topbar = 1;  /* 0 means bottom bar */
 static char *fonts[] = {
-    "FiraCode Nerd Font:pixelsize=30",
+    "FiraCode Nerd Font Freeze:pixelsize=30",
     "NotoColorEmoji:pixelsize=28:antialias=true:autohint=true"};
 
 static char normbgcolor[] = "#222222";
