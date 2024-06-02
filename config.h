@@ -294,7 +294,7 @@ static Key keys[] = {
     /* preview lastscreenshot */
     {ALTKEY | ShiftMask, XK_w, spawn, SHCMD("lastscreenshot")},
     {MODKEY | ShiftMask, XK_w, spawn, SHCMD("uploadlast")},
-    {ALTKEY | ShiftMask, XK_v, spawn, SHCMD("copyq menu")},
+    {ALTKEY | ShiftMask, XK_v, spawn, SHCMD("clipmenu")},
     {MODKEY, XK_Print, spawn, SHCMD("dmenurecord")},
     {MODKEY, XK_Delete, spawn, SHCMD("dmenurecord kill")},
 
