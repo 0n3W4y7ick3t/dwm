@@ -288,14 +288,9 @@ static Key keys[] = {
     {MODKEY, XK_space, zoom, {0}},
     {MODKEY | ShiftMask, XK_space, togglefloating, {0}},
 
-    {ShiftMask, XK_Print, spawn, SHCMD("maimall")},
-    {ALTKEY, XK_Print, spawn, SHCMD("maimact")},
-    {0, XK_Print, spawn, SHCMD("maimsel")},
-    {MODKEY | ShiftMask, XK_s, spawn, SHCMD("maimcopy")},
-
-    /* preview lastscreenshot */
-    {ALTKEY | ShiftMask, XK_w, spawn, SHCMD("lastscreenshot")},
-    {MODKEY | ShiftMask, XK_w, spawn, SHCMD("uploadlast")},
+    /* take, upload, preview screenshots */
+    {0, XK_Print, spawn, SHCMD("dmenuscreenshots")},
+    {MODKEY | ShiftMask, XK_s, spawn, SHCMD("dmenuscreenshots")},
     {ALTKEY | ShiftMask, XK_v, spawn, SHCMD("clipmenu")},
     {MODKEY, XK_Print, spawn, SHCMD("dmenurecord")},
     {MODKEY, XK_Delete, spawn, SHCMD("dmenurecord kill")},
