@@ -289,8 +289,8 @@ static Key keys[] = {
     {MODKEY | ShiftMask, XK_space, togglefloating, {0}},
 
     /* take, upload, preview screenshots */
-    {0, XK_Print, spawn, SHCMD("dmenuscreenshots")},
-    {MODKEY | ShiftMask, XK_s, spawn, SHCMD("dmenuscreenshots")},
+    {0, XK_Print, spawn, SHCMD("flameshot gui")},
+    {MODKEY | ShiftMask, XK_s, spawn, SHCMD("flameshot gui")},
     {ALTKEY | ShiftMask, XK_v, spawn, SHCMD("clipmenu")},
     {MODKEY, XK_Print, spawn, SHCMD("dmenurecord")},
     {MODKEY, XK_Delete, spawn, SHCMD("dmenurecord kill")},
