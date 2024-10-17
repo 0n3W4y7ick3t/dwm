@@ -7,7 +7,7 @@
 #define TERMCLASS "St"
 
 /* appearance */
-static unsigned int borderpx = 2; /* border pixel of windows */
+static unsigned int borderpx = 5; /* border pixel of windows */
 static unsigned int snap = 32;    /* snap pixel */
 static unsigned int gappih = 10;  /* horiz inner gap between windows */
 static unsigned int gappiv = 15;  /* vert inner gap between windows */
@@ -201,8 +201,7 @@ static Key keys[] = {
      {.v = &layouts[7]}}, /* centeredfloatingmaster */
     {MODKEY, XK_o, incnmaster, {.i = +1}},
     {MODKEY | ShiftMask, XK_o, incnmaster, {.i = -1}},
-    {MODKEY, XK_p, spawn, SHCMD("mpc toggle")},
-    {MODKEY | ShiftMask, XK_p, spawn, SHCMD("playerctl play-pause")},
+    {MODKEY, XK_p, spawn, SHCMD("playback-control toggle")},
     {MODKEY, XK_bracketleft, spawn, SHCMD("mpc seek -10")},
     // {MODKEY | ShiftMask, XK_bracketleft, spawn, SHCMD("mpc seek -60")},
     {MODKEY, XK_bracketright, spawn, SHCMD("mpc seek +10")},
@@ -252,10 +251,8 @@ static Key keys[] = {
     {MODKEY, XK_m, spawn, SHCMD(TERMINAL " -e ncmpcpp")},
     {MODKEY | ShiftMask, XK_m, spawn,
      SHCMD("pulsemixer --toggle-mute; kill -44 $(pidof dwmblocks)")},
-    {MODKEY, XK_comma, spawn, SHCMD("mpc prev")},
-    {MODKEY | ShiftMask, XK_comma, spawn, SHCMD("playerctl previous")},
-    {MODKEY, XK_period, spawn, SHCMD("mpc next")},
-    {MODKEY | ShiftMask, XK_period, spawn, SHCMD("playerctl next")},
+    {MODKEY, XK_comma, spawn, SHCMD("playback-control prev")},
+    {MODKEY, XK_period, spawn, SHCMD("playback-control next")},
 
     {MODKEY, XK_Left, focusmon, {.i = -1}},
     {MODKEY | ShiftMask, XK_Left, tagmon, {.i = -1}},
@@ -301,8 +298,8 @@ static Key keys[] = {
      SHCMD("pulsemixer --change-volume +3; kill -44 $(pidof dwmblocks)")},
     {0, XF86XK_AudioLowerVolume, spawn,
      SHCMD("pulsemixer --change-volume -3; kill -44 $(pidof dwmblocks)")},
-    {0, XF86XK_AudioPrev, spawn, SHCMD("mpc prev")},
-    {0, XF86XK_AudioNext, spawn, SHCMD("mpc next")},
+    {0, XF86XK_AudioPrev, spawn, SHCMD("playback-control prev")},
+    {0, XF86XK_AudioNext, spawn, SHCMD("playback-control next")},
     {0, XF86XK_AudioPause, spawn, SHCMD("mpc pause")},
     {0, XF86XK_AudioPlay, spawn, SHCMD("mpc play")},
     {0, XF86XK_AudioStop, spawn, SHCMD("mpc stop")},
